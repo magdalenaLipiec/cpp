@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int liczba;
+float oceny[liczba];
+float suma = 0;
+float srednia;
+
+int main()
+{
+
+
+    for(int i=0; i<5; i++)
+    {
+        cout<<"Podaj ocene"<<endl;
+        cin>>oceny[i];
+        suma = suma + oceny[i];
+    }
+
+    srednia = suma/liczba;
+    cout<<"Srednia ocen wynosi: ";
+    cout<<srednia;
+    return 0;
+
+
+}
