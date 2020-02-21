@@ -1,0 +1,20 @@
+//Znajdz najwieksza liczbe ze zbioru trzech liczb
+#include <iostream>
+using namespace std;
+
+int a, b, c, m;
+
+int main()
+{
+    cout << "Podaj trzy liczby rozdzielone spacja" << endl; //zadziala tez enter
+    cin>>a>>b>>c;
+
+    m = a;
+    if(b>m) m=b;
+    if(c>m) m=c;
+
+    cout<<"Najwieksza liczba to: "<<m<<endl;
+
+
+    return 0;
+}
