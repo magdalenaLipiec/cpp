@@ -1,0 +1,40 @@
+#include <iostream>
+#include "event.h"
+using namespace std;
+
+Event::Event(string n, int d, int m, int y, int h, int mins)
+{
+    name = n;
+    day = d;
+    month = m;
+    year = y;
+    hour = h;
+    minutes = mins;
+}
+
+Event::~Event()
+{
+    cout<<endl<<"Destruktor -- kasuje obiekty";
+}
+
+void Event::load()  //pyta o kazdy atrybut z klawiatury
+{
+    cout<<endl<<"Nazwa wydarzenia: ";
+    cin>>name;
+    cout<<endl<<"Dzien wydarzenia: ";
+    cin>>day;
+    cout<<endl<<"Miesiac wydarzenia: ";
+    cin>>month;
+    cout<<endl<<"Rok wydarzenia: ";
+    cin>>year;
+    cout<<endl<<"Godzina wydarzenia: ";
+    cin>>hour;
+    cout<<endl<<"Minuta wydarzenia: ";
+    cin>>minutes;
+}
+
+void Event::show()
+{
+    cout<<endl<<name<<" "<<day<<"."<<month<<"."<<year<<"."<<hour<<"."<<minutes<<endl;
+
+}
