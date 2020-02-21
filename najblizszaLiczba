@@ -1,0 +1,20 @@
+//Napisz program znajdujacy liczbe najblizsza sredniej z 5ciu podanych liczb
+#include <iostream>
+using namespace std;
+
+float a, b, c, d, e, abst;
+float suma, srednia;
+int main()
+{
+    cout << "Podaj 5 liczb rozdzielonych spacja" << endl;
+    cin>>a>>b>>c>>d>>e;
+
+    suma = a + b + c + d + e;
+    srednia = suma/5;
+    cout<<"Srednia z podanych liczb to: "<<srednia<<endl;
+
+    abst = srednia;
+    if(a)
+
+    return 0;
+}
