@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+class Ksztalt
+{
+public:
+    virtual void obliczPole() = 0;  //czysta funkcja wirtualna
+};
+
+class Kolo : public Ksztalt
+{
+    float r;
+
+public:
+    Kolo(float x)  //konstruktor
+    {
+        r = x;
+    }
+
+    virtual void obliczPole()
+    {
+        cout<<"Pole kola: "<<3.14*r*r<<endl;
+    }
+};
+
+class Kwadrat :public Ksztalt
+{
+    float a;
+
+public:
+    Kwadrat(float x)    //konstruktor
+    {
+        a = x;
+    }
+
+    virtual void obliczPole()
+    {
+        cout<<"Pole kwadratu: "<<a*a<<endl;
+    }
+};
+
+void obliczenia(Ksztalt *x)
+{
+    x -> obliczPole();
+}
+
+int main()
+{
+    Kolo k(1);
+    Kwadrat kw(2);
+
+    //polimorficzny wskaznik bedzie typu abstrakcyjnego ksztalt
+    Ksztalt *wsk;
+    wsk = &k;
+    //wywolanie funkcji obliczajacej pole kola
+    wsk -> obliczPole();
+
+    wsk = &kw;
+    wsk -> obliczPole();
+
+    obliczenia(wsk);
+
+    return 0;
+}
