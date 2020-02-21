@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+class Zwierze
+{
+    public:
+
+    string gatunek;
+    string imie;
+    int wiek;
+
+    void dodajZwierze()
+    {
+        cout<<"Prosze o dodanie zwierzecia do bazy"<<endl;
+        cout<<"Podaj gatunek zwierzecia: ";
+        cin>>gatunek;
+        cout<<"Podaj imie zwierzecia: ";
+        cin>>imie;
+        cout<<"Podaj wiek zwierzecia : ";
+        cin>>wiek;
+    }
+
+    void dajGlos()
+    {
+        if (gatunek == "kot")
+        {
+            cout<<"Imie: "<<imie<<" "<<"Wiek: "<<wiek<<" "<<"Miau"<<endl;
+        }
+        else if (gatunek == "koza")
+        {
+            cout<<"Imie: "<<imie<<" "<<"Wiek: "<<wiek<<" "<<"Meee"<<endl;
+        }
+        else if (gatunek == "krowa")
+        {
+            cout<<"Imie: "<<imie<<" "<<"Wiek: "<<wiek<<" "<<"Muuuu"<<endl;
+        }
+        else cout<<"Nie ma takiego gatunku!"<<endl;
+    }
+};
+
+int main()
+{
+    Zwierze z1, z2, z3;
+    z1.dodajZwierze();
+    z1.dajGlos();
+    z2.dodajZwierze();
+    z2.dajGlos();
+    z3.dodajZwierze();
+    z3.dajGlos();
+    return 0;
+}
